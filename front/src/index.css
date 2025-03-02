@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f5fb;
+}
+
+.input_field {
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    /* gap: 35px;   */
+    width: 35vw;
+    padding: 15px;
+}
+
+.input_field input,
+.input_field textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #027cff;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 35px;
+}
+
+.input_field input[type='file']{
+    border: 2px dotted #002dc3;
+    margin-top: 40px;
+}
+
+.input_field input[type='file']:focus{
+    border: 2px dotted #002dc3;
+}
+
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 15px;
+    text-align: end;
+    color: #005cbe;
+}
+
+.h3box{
+    display: inline-block;
+    width: 100%;
+}
+
+span{
+    color: red;
+}
+
+.input_field input:focus,
+.input_field textarea:focus {
+    border-color: #002dc3;
+    outline: none;
+}
+
+.input_field textarea {
+    height: 180px;
+    resize: vertical;
+}
+
+.input_field button {
+    padding: 12px;
+    background: #0056b3;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 15vw;
+    margin-top: 35px;
+}
+
+.input_field button:hover {
+    background: #0062cb;
+}
+
+.input_container{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.aside{
+    height: 100vh;
+}
+
+.aside_container{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:1025px) {
+    .aside_container{
+        display: none;
+    }
+
+    .input_field{
+        flex-grow: 1;
+    }
+
+    .input_container{
+        flex-grow: 1;
+    }
+
+    .input_field button {
+        width: 30vw;
+    }
+}
+
+.ui_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #344aad;
+    background-clip: text;
+    letter-spacing: 1.5px;
+    font-family: "Inter", sans-serif;
+}
+
+.successful{
+    background-color: rgb(0, 141, 0);
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    border-radius: 5px;
+    border: none;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+}
+
+@media screen and (max-width:580px) {
+    .successful{
+        top: 75px;
+        right: 45px;
+    }
+}
+
+.successful p{
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
