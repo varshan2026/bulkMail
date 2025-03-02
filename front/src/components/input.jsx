@@ -47,7 +47,7 @@ function Input(){
             
         setstatus(true)
 
-        axios.post('https://bulk-mail-back-jet.vercel.app/mail', {msg:msg, sub:sub, emailList:emailList})
+        axios.post('https://bulk-mail-sever-18w9jgqun-varshans-projects.vercel.app/mail', {msg:msg, sub:sub, emailList:emailList})
         .then((data) => {
 
             if(data.data == true){
