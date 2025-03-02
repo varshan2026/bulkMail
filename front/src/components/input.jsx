@@ -47,7 +47,7 @@ function Input(){
             
         setstatus(true)
 
-        axios.post('https://bulk-mail-back-bay.vercel.app/mail', {msg:msg, sub:sub, emailList:emailList})
+        axios.post('http://127.0.0.1:3000/mail', {msg:msg, sub:sub, emailList:emailList})
         .then((data) => {
 
             if(data.data == true){
