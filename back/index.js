@@ -11,9 +11,15 @@ mongoose.connect("mongodb+srv://developer:MeRn%262%4026@cluster0.yktye.mongodb.n
 
 const server = express();
 
-server.use(cors());
 server.use(express.json())
 server.use(express.urlencoded({extended:true}));
+
+server.use(cors({
+    origin: ["https://bulk-mail-front-nu.vercel.app/"],
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 
 const credential = mongoose.model("credential", {}, "passkey");
 
