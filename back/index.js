@@ -13,12 +13,7 @@ const server = express();
 
 server.use(express.json())
 server.use(express.urlencoded({extended:true}));
-
-server.use(cors({
-    origin: ["https://bulk-mail-front-nu.vercel.app/"],
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-}));
+server.use(cors());
 
 
 const credential = mongoose.model("credential", {}, "passkey");
